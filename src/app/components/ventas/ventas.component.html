@@ -1,0 +1,63 @@
+
+<div class="d-flex p-2 justify-content-center">
+
+   
+    <input type="text" class="form-control" placeholder="producto" [(ngModel)] = "nomproc">
+    <button type="button" class="btn btn-primary" (click)= "buscarProducto(nomproc)">Buscar</button>
+ 
+  
+</div>
+
+<div class="d-flex">
+    <div class="align-self-start">Aligned flex item</div>
+
+
+
+    <div class="align-self-end">Aligned flex item</div>
+    <div class="align-self-center">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Importe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of productos; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{producto.nomprod}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.stock}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+    </div>
+    <div class="align-self-baseline">
+
+
+
+
+
+    </div>
+
+
+
+    <div class="align-self-stretch">
+
+        
+        <div class="card" style="width: 18rem;">
+        <div style="background-color: blue;height: 150px;"> <h1>S/. 20</h1></div>
+            <div class="card-body">
+              <h5 class="card-title">Documento</h5>
+              <p class="card-text">Fecha de venta</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+
+
+</div>
